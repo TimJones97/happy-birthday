@@ -36,14 +36,13 @@ body {
   font-family: 'Sile';
   color: #1F1F1F;
 }
-
 .envelope .front, .envelope .back {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #FFF;
   border-radius: 5px;
-  box-shadow: 0 0 30px -5px #fbc0b9eb;
+  /*box-shadow: 0 0 30px -5px #fbc0b9eb;*/
 }
 
 .envelope .front {
@@ -56,29 +55,6 @@ body {
 .envelope .front:focus {
   outline: none;
 }
-
-.envelope .front .stamp {
-  transform: translate3d(0, 0, 1px);
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  right: 10px;
-  top: 10px;
-  padding: 10px;
-  background: radial-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, #f6f6df 4px, #f6f6df);
-  background-size: 20px 20px;
-  background-position: -10px -10px;
-}
-
-.envelope .front .stamp:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #FFF;
-  border-radius: 2px;
-}
-
 .envelope .front .mail {
   text-align: center;
   display: table-cell;
@@ -129,7 +105,20 @@ body {
   background-color: #adcbd6;
   box-shadow: 0px 0px 100px #9b9b9b;
 }
-
+.envelope .back .top-flip:before {
+  animation: remove-box-shadow 1s 2s forwards;
+}
+@keyframes remove-box-shadow {
+  0% {
+    box-shadow: 0px 0px 100px #9b9b9b;
+  }
+  50% {
+    box-shadow: 0px 0px 100px #9b9b9b;
+  }
+  100% {
+    box-shadow: unset;
+  }
+}
 .envelope .back .top-flip:before, .envelope .back .bottom-flip:before {
   width: 388.90873px;
   height: 388.90873px;
@@ -147,11 +136,9 @@ body {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .envelope .back .bottom-flip {
   z-index: 4;
 }
-
 .envelope .back .bottom-flip:before {
   transform-origin: left bottom;
   transform: rotate(45deg) translate(-15px, -15px);
@@ -159,17 +146,14 @@ body {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
 .envelope .back .left-flip:before, .envelope .back .right-flip:before {
   width: 269.27249px;
   height: 269.27249px;
   top: -5px;
 }
-
 .envelope .back .left-flip {
   z-index: 3;
 }
-
 .envelope .back .left-flip:before {
   transform-origin: top left;
   transform: rotate(45deg);
