@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <meta name="title" content="Happy Birthday Leah!">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="Happy birthday to the best egg in the world.">
+
+  <!-- Prevent indexing -->
+  <meta name="robots" content="noindex">
+
+  <!-- Color for Chrome tabs (Android only) -->
+  <meta name="theme-color" content="#ffe4e1">
+
+    <!-- OpenGraph meta tags -->
+  <meta property="og:title" content="Happy Birthday Leah!">
+  <meta property="og:site_name" content="Happy Birthday Leah!">
+  <meta property="og:url" content="https://timj.design/happy-birthday/">
+  <meta property="og:description" content="Happy birthday to the best egg in the world.">
+  <meta property="og:type" content="website">
+
+  <meta property="og:image" content="og-logo.jpg">
+
+  <title>Happy Birthday Leah!</title>
+  <link rel="shortcut icon" type="image/jpg" href="confetti.ico"/>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+  <!-- Use document write to force refresh of CSS -->
+  <script>document.write('<link rel="stylesheet" type="text/css" href="style.css?v=' + Date.now() + '"\/>');</script>
+</head>
+<body>
+  <div class="envelope new">
+    <div class="front">
+      <div class="mail">
+      </div>
+    </div>
+    <div class="back">
+      <div class="letter">
+        <p>I hope that your day is filled with </p>
+        <p>happiness and lots of presents! </p>
+        <div class="box">
+          <img src="gudetama.png">
+        </div>
+        <p class="from">&#9829;&nbsp;From Tim</p>
+      </div>
+      <div class="flip left-flip"></div>
+      <div class="flip right-flip"></div>
+      <div class="flip bottom-flip"></div>
+      <div class="flip top-flip"></div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+
+      if (!$('.envelope').hasClass('open')){
+        $('.envelope').click(function(){
+          $(this).removeClass('new').addClass('open');
+        });
+      }
+      
+    });
+  </script>
+</body>
+</html>
