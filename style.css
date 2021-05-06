@@ -14,7 +14,7 @@ body, html {
 
 body {
   margin: 0;
-  background-color: mistyrose;
+  background-color: #ffdd15;
   position: relative;
   perspective: 800px;
   overflow: hidden;
@@ -94,25 +94,15 @@ body {
   font-weight: bold;
   margin: 0;
 }
-
+.envelope .back .letter p:first-child {
+  margin-top: 50px;
+}
 .envelope .back .letter p {
   font-size: 30px;
   line-height: 20px;
   letter-spacing: 2px;
-}
-
-.envelope .front .mail p:first-child {
-  font-size: 50px;
-  line-height: 50px;
-}
-
-.envelope .front .mail p:last-child {
-  font-size: 30px;
-}
-
-.envelope .back .letter p:nth-child(2) {
-  font-size: 30px;
-  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .envelope .back .letter p.from {
@@ -422,6 +412,7 @@ body {
 }
 .box img {
   width: 200px;
+  height: 85px;
 }
 
 @media only screen and (max-width: 767px){
