@@ -91,7 +91,6 @@ body {
 .envelope .back {
   transform: rotateY(180deg) translate3d(0, 0, 1px);
 }
-
 .envelope .back .flip {
   position: absolute;
   width: 100%;
@@ -106,7 +105,7 @@ body {
   box-shadow: 0px 0px 100px #9b9b9b;
 }
 .envelope.open .back .top-flip:before {
-  animation: remove-box-shadow 1s 2s forwards;
+  animation: remove-box-shadow 1s 1s forwards;
 }
 @keyframes remove-box-shadow {
   0% {
@@ -189,7 +188,7 @@ body {
   box-shadow: 0px 1px 100px #fbc0b9eb;
 }
 
-.envelope .back .letter div {
+.envelope .back .letter .box {
   position: relative;
   margin-top: 50px;
 }
@@ -399,13 +398,33 @@ body {
   width: 100px;
   height: 85px;
   margin-right: 10px;
+  transform: translateZ(0);
 }
-.box img.gudetama {
+.box .gudetama {
   width: 100px;
   height: 85px;
+  transform: translateZ(0);
+}
+.box .gudetama img {
+  position: absolute;
+  width: 100px;
+  height: 85px;
+}
+.box .gudetama .first {
   animation: bounce 2s infinite ease forwards;
+  opacity: 1;
+}
+.box .gudetama .second {
+  opacity: 0;
+  perspective: 800px;
 }
 
+.box .gudetama.hover .first {
+  opacity: 0;
+}
+.box .gudetama.hover .second {
+  opacity: 1;
+}
 @keyframes bounce {
   0%, 100% {
     transform: translateY(5px);
